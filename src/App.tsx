@@ -110,32 +110,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-secondary selection:bg-accent selection:text-primary relative overflow-clip">
-      {/* Dynamic Background Lights */}
+      {/* Static Background Lights */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Mobile: Higher Intensity */}
         <div className="md:hidden">
-          <motion.div 
-            animate={{ scale: [1, 2.2, 1], opacity: [0.8, 1, 0.8] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#7c5f9f]/50 blur-[80px]" 
+          <div 
+            className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#7c5f9f]/50 blur-[80px] scale-150 opacity-90" 
           />
-          <motion.div 
-            animate={{ scale: [1, 2.8, 1], opacity: [0.7, 0.9, 0.7] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#D4AF37]/50 blur-[100px]" 
+          <div 
+            className="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#D4AF37]/50 blur-[100px] scale-150 opacity-80" 
           />
         </div>
         {/* Desktop: Lower Intensity */}
         <div className="hidden md:block">
-          <motion.div 
-            animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.6, 0.4] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#7c5f9f]/30 blur-[100px]" 
+          <div 
+            className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#7c5f9f]/30 blur-[100px] scale-125 opacity-50" 
           />
-          <motion.div 
-            animate={{ scale: [1, 1.8, 1], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#D4AF37]/30 blur-[120px]" 
+          <div 
+            className="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#D4AF37]/30 blur-[120px] scale-150 opacity-40" 
           />
         </div>
       </div>
